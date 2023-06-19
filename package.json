@@ -30,6 +30,10 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
+  "scripts": {
+    "start": "gatsby serve --port $PORT --host 0.0.0.0",
+    "build": "gatsby build"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
