@@ -10,7 +10,7 @@ import * as styles from "../components/index.module.css"
 
 const IndexPage = () => (
   <Layout>
-   
+   <h1 className="">Hello world</h1>
      
   </Layout>
 )

@@ -9,7 +9,7 @@ const SecondPage = ({ serverData }) => {
 
   return (
     <Layout>
-    <h1></h1>
+    <h1>Page-2</h1>
     <p></p>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
