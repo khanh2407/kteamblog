@@ -5,7 +5,6 @@ import Seo from "../components/seo"
 
 const postDetail = ({ serverData }) => {
   const  postText  = serverData;
-  console.log(postText);
   return (
     <Layout>
     <h1>Post Detail</h1>
@@ -19,7 +18,7 @@ const postDetail = ({ serverData }) => {
 
   
 
-export const Head = () => <Seo title="Page two" />
+export const Head = () => <Seo title="Page two"/>
 export default postDetail
 export async function getServerData() {
     try {
