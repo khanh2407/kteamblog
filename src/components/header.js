@@ -5,7 +5,7 @@ const Header = ({ siteTitle }) => (
   <header
     className=""
   >
-   <h1 className="">Header Hello world</h1>
+   <h1 className="text-red-400">Header Hello world</h1>
   </header>
 )
 
