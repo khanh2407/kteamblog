@@ -8,7 +8,7 @@ const Content = ({ serverData }) => {
       <div>
           {totalPosts.map((post , id) => (
            <a href="" key={id}>
-              <div className="h-80 w-24">
+              <div>
                   <div>
                     <img src={post.guid.rendered} alt=""/>
                   </div>
