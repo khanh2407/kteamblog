@@ -14,8 +14,6 @@ const SecondPage = ({ serverData }) => {
     <Link to="/">Go back to the homepage</Link>
   </Layout>
   )
- 
-  
 }
 
   

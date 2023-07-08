@@ -1,19 +1,23 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-
+import Content from "../components/content"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 
 
 
-const IndexPage = () => (
-  <Layout>
-   <h1 className="">Hello world</h1>
+const IndexPage = ({ serverData }) => (
+  
+
+    <Layout>
+  <Content serverData={serverData}/>
      
   </Layout>
-)
+  )
+
+  
 
 /**
  * Head export to define metadata for the page
@@ -22,4 +26,23 @@ const IndexPage = () => (
  */
 export const Head = () => <Seo title="Home" />
 
+
 export default IndexPage
+
+export async function getServerData() {
+  try {
+    const res = await fetch(`http://kteamblog.local/wp-json/wp/v2/posts`)
+    if (!res.ok) {
+      throw new Error(`Response failed`);
+    }
+    return {
+      props: await res.json(),
+    }
+  } catch (error) {
+    return {
+      status: 500,
+      headers: {},
+      props: {},
+    }
+  }
+}

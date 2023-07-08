@@ -12,17 +12,12 @@ const postDetail = ({ serverData }) => {
     <Link to="/">Go back to the homepage</Link>
   </Layout>
   )
- 
-  
 }
+export default postDetail;
 
-  
-
-export const Head = () => <Seo title="Page two"/>
-export default postDetail
 export async function getServerData() {
     try {
-      const res = await fetch(`http://kteamblog.local/wp-json/wp/v2/posts/1`)
+      const res = await fetch(`http://kteamblog.local/wp-json/wp/v2/posts`)
       if (!res.ok) {
         throw new Error(`Response failed`)
       }
