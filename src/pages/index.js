@@ -27,10 +27,9 @@ export const Head = () => <Seo title="Home" />
 
 
 export default IndexPage
-
 export async function getServerData() {
   try {
-    const res = await fetch(`http://kteamblog.local/wp-json/wp/v2/posts`)
+    const res = await fetch(`http://kteamblog.local/wp-json/wp/v2/posts/?_embed`)
     if (!res.ok) {
       throw new Error(`Response failed`);
     }
@@ -45,3 +44,4 @@ export async function getServerData() {
     }
   }
 }
+

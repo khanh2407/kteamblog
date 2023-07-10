@@ -1,12 +1,13 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import logo from '../images/logo.mp4'
 import { StaticImage } from "gatsby-plugin-image"
 
 const Header = () => (
   <header className="h-10 w-full bg-main-gradient flex justify-center ">
     <div className="w-[1280px] flex justify-between items-center">
       <div className="flex items-center">
-    <Link to="/">    <StaticImage src="../images/logo.jpg" className="h-8 w-8" alt="Logo"/></Link>
+    <Link to="/">    <video src={logo} autoPlay playsInline muted loop className="h-10 w-full rounded-lg border border-solid border-sky-500" alt="Logo"/></Link>
       </div>
       <nav className="w-[300px] h-full ">
         <ul className="flex justify-between items-center h-full">
