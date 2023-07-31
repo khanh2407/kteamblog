@@ -8,7 +8,6 @@ import Seo from "../components/seo"
 
 
 const IndexPage = ({ serverData }) => (
-  
 
     <Layout>
   <Content serverData={serverData}/>

@@ -19,6 +19,18 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        baseUrl : "kteamblog.local",
+        protocol:"http",
+        hostingWPCOM : false,
+        useAFC:true,
+        verboseOutput:true
+
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -35,5 +47,6 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+
   ],
 }
